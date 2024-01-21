@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-simple-link-component@1.0.0/dist/aframe-simple-link-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script>
+      AFRAME.registerComponent("navigate-on-click", {
+        schema: {
+          url: { default: "" },
+        },
+
+        init: function () {
+          var data = this.data;
+          var el = this.el;
+
+          el.addEventListener("click", function () {
+            window.location.href = data.url;
+          });
+        },
+      });
+    </script>
+    <title>Tugas VR Sederhana</title>
+  </head>
+  <body>
+    <a-scene cursor="rayOrigin: mouse">
+      <a-entity camera kinematic-body position="3 4 4">
+        <!-- Camera Entity -->
+        <a-entity
+          id="camera"
+          acceleration="200w"
+          camera
+          look-controls
+          wasd-controls
+        ></a-entity>
+      </a-entity>
+
+      <a-assets>
+        <a-asset-item
+          id="snow_camp"
+          src="/Asset/winter_camping/scene.gltf"
+        ></a-asset-item>
+
+        <img src="Asset/img/vortex.png" id="Portal" alt="Portal" />
+      </a-assets>
+
+      <a-entity
+        gltf-model="#snow_camp"
+        position="-2.5 4 -2.5"
+        scale="15 15 15"
+      ></a-entity>
+
+      <a-entity environment="preset: forest"></a-entity>
+
+      <a-link
+        href="Scene_1.html"
+        title="Forest Camp"
+        position="6 5 6"
+        image="#Portal"
+      ></a-link>
+
+      <a-link
+        href="Scene_2.html"
+        title="Desert Camp"
+        position="3 5 6"
+        image="#Portal"
+      ></a-link>
+
+      <a-link
+        href="Scene_4.html"
+        title="Maple Forest Camp"
+        position="0 5 6"
+        image="#Portal"
+      ></a-link>
+    </a-scene>
+  </body>
+</html>

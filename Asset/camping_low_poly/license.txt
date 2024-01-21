@@ -1,0 +1,11 @@
+Model Information:
+* title:	Camping Low Poly
+* source:	https://sketchfab.com/3d-models/camping-low-poly-d05f47384a6046ecaf39f857bd06c5a9
+* author:	marzipanne (https://sketchfab.com/marzipanne)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Camping Low Poly" (https://sketchfab.com/3d-models/camping-low-poly-d05f47384a6046ecaf39f857bd06c5a9) by marzipanne (https://sketchfab.com/marzipanne) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
